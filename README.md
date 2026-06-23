@@ -18,7 +18,7 @@ hi, in this repo i am creating a rag based application which answers over the co
 
 
 
-
+ 
 # STEPS 
 
 verify the models you already downloaded can load
