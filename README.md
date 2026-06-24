@@ -15,7 +15,7 @@ hi, in this repo i am creating a rag based application which answers over the co
 
 3) https://cloud.google.com/terms/sla?hl=en
 
-
+ 
 
 
  
