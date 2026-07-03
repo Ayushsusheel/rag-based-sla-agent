@@ -84,6 +84,8 @@ powershell
 
 
 
+# Data Ingestion Flow
+<img width="1154" height="320" alt="image" src="https://github.com/user-attachments/assets/c7f5a926-da14-4447-aefe-a359c1b64bc1" />
 
 
 
