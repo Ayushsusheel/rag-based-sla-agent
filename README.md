@@ -89,6 +89,8 @@ powershell
 
 
 
+# RAG PIPELINE
+<img width="951" height="657" alt="image" src="https://github.com/user-attachments/assets/1de03dd5-1249-49d7-9d8f-dedbe25649ac" />
 
 
 
