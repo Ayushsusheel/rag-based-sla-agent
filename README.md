@@ -93,9 +93,18 @@ powershell
 <img width="951" height="657" alt="image" src="https://github.com/user-attachments/assets/1de03dd5-1249-49d7-9d8f-dedbe25649ac" />
 
 
+# Application OUTPUT 
+
+<img width="798" height="620" alt="image" src="https://github.com/user-attachments/assets/4cfa6163-539c-418e-afa8-d3d25670e6fd" />
 
 
+<img width="1991" height="620" alt="image" src="https://github.com/user-attachments/assets/584b9e44-9323-415e-80f7-a539eb067b62" />
 
+
+<img width="2004" height="491" alt="image" src="https://github.com/user-attachments/assets/f817d3ba-c123-4c2d-8cc1-226b2f22a670" />
+
+
+<img width="1185" height="343" alt="image" src="https://github.com/user-attachments/assets/a9e8ad5f-66c6-4185-b4b1-bb88e4c2fc54" />
 
 
 
