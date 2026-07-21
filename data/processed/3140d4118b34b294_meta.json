@@ -1,0 +1,15 @@
+{
+  "pipeline_version": "ms_sla_prod_final_v2",
+  "toc_count": 199,
+  "top_section_count": 4,
+  "service_count": 191,
+  "raw_table_count": 296,
+  "table_row_count": 1092,
+  "rule_count": 570,
+  "formula_count": 213,
+  "definition_count": 1494,
+  "appendix_topic_count": 3,
+  "service_exception_count": 28,
+  "summary_count": 191,
+  "chunk_count": 459
+}
