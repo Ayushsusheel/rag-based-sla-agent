@@ -1,0 +1,431 @@
+2026-07-03 13:03:52,863 | INFO | [bold cyan]START[/] ingest_document file=_incoming_OnlineSvcsConsolidatedSLA_WW_English_June_2026_CR_.pdf ext=.pdf doc_id=3140d4118b34b294
+2026-07-03 13:03:52,888 | INFO | [bold cyan]START[/] load_pdf_document file=3140d4118b34b294__incoming_OnlineSvcsConsolidatedSLA_WW_English_June_2026_CR_.pdf
+2026-07-03 13:03:53,573 | INFO | [bold yellow]PDF loaded[/] pages=109
+2026-07-03 13:03:53,576 | INFO | [bold green]END[/] load_pdf_document elapsed=0.69s
+2026-07-03 13:03:53,578 | INFO | [bold cyan]START[/] extract_pdf_tables file=3140d4118b34b294__incoming_OnlineSvcsConsolidatedSLA_WW_English_June_2026_CR_.pdf
+2026-07-03 13:04:26,573 | INFO | [bold yellow]PDF tables extracted[/] count=836
+2026-07-03 13:04:26,574 | INFO | [bold green]END[/] extract_pdf_tables elapsed=32.99s
+2026-07-03 13:04:26,588 | INFO | [bold yellow]PDF TOC parsed[/] count=199
+2026-07-03 13:04:26,590 | INFO | [bold yellow]Top sections built[/] count=4
+2026-07-03 13:04:26,687 | INFO | [bold yellow]PDF top sections extracted[/] count=4
+2026-07-03 13:04:26,690 | INFO | [bold yellow]Service index built[/] count=191
+2026-07-03 13:04:26,793 | INFO | [bold yellow]PDF service bodies extracted[/] count=191
+2026-07-03 13:04:27,210 | INFO | [bold yellow]Raw tables extracted[/] count=296
+2026-07-03 13:04:27,212 | INFO | [bold yellow]Table rows extracted[/] count=1092
+2026-07-03 13:04:27,212 | INFO | [bold yellow]Table text chunks built[/] count=296
+2026-07-03 13:04:27,498 | INFO | [bold yellow]Rules extracted[/] count=570
+2026-07-03 13:04:27,733 | INFO | [bold yellow]Formulas extracted[/] count=213
+2026-07-03 13:04:28,184 | INFO | [bold yellow]Definitions extracted[/] count=1494
+2026-07-03 13:04:28,189 | INFO | [bold yellow]Appendix topics extracted[/] count=3
+2026-07-03 13:04:28,385 | INFO | [bold yellow]Service exceptions extracted[/] count=28
+2026-07-03 13:04:28,466 | INFO | [bold yellow]Summaries extracted[/] count=191
+2026-07-03 13:04:28,563 | INFO | [bold yellow]Narrative chunks extracted[/] count=459
+2026-07-03 13:06:52,195 | INFO | [bold yellow]Ingestion summary[/] {'pipeline_version': 'ms_sla_prod_final_v2', 'toc_count': 199, 'top_section_count': 4, 'service_count': 191, 'raw_table_count': 296, 'table_row_count': 1092, 'rule_count': 570, 'formula_count': 213, 'definition_count': 1494, 'appendix_topic_count': 3, 'service_exception_count': 28, 'summary_count': 191, 'chunk_count': 459}
+2026-07-03 13:06:52,202 | INFO | [bold green]END[/] ingest_document elapsed=179.32s
+2026-07-03 13:07:53,992 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 13:07:54,175 | INFO | [bold green]END[/] answer_query elapsed=0.18s
+2026-07-03 13:08:06,851 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 13:08:07,032 | INFO | [bold green]END[/] answer_query elapsed=0.18s
+2026-07-03 13:08:32,990 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 13:08:34,558 | INFO | [bold yellow]Hybrid prompt[/]
+2026-07-03 13:08:34,561 | INFO | Question:
+what is “Azure AI Foundry Resource”
+
+Evidence:
+[Source 1] citation=AZURE AI SEARCH :: page 33 :: chunk
+Azure AI Search
+Additional Definitions:
+“Average Error Rate” for an Applicable Period is the sum of Error Rates for each hour in the Applicable Period divided by the total number of hours
+in the Applicable Period.
+“Error Rate” is the total number of Failed Requests divided by Total Requests, for a Search Service, during a given one-hour interval. If the Total
+Requests in a one-hour interval is zero, the Error Rate for that interval is 0%.
+“Excluded Requests” are all requests that are throttled due to exhaustion of resources allocated for a Search Service Instance, as indicated by an
+HTTP 503 status code and a response header indicating the request was throttled.
+“Failed Requests” is the set of all requests within Total Requests that fail to return either a Success Code or HTTP 4xx response.
+“Replica” is a copy of a search index within a Search Service Instance.
+“Search Service Instance” is an Azure Search service instance containing one or more search indexes.
+[Source 2] citation=AZURE AI SEARCH :: page 33 :: chunk
+“Search Service Instance” is an Azure Search service instance containing one or more search indexes.
+“Total Requests” is the set of (i) all requests to update a Search Service Instance having three or more Replicas, plus (ii) all requests to query a
+Search Service Instance having two or more Replicas, other than Excluded Requests, within a one-hour interval during an Applicable Period.
+→
+Introduction
+→
+General Terms
+→
+Service Specific Terms
+→
+Appendices
+Uptime Percentage: The Uptime Percentage is calculated using the following formula:
+100% −Average Error Rate
+Service Credit:
+Uptime Percentage
+Service Credit
+< 99.9%
+10%
+< 99%
+25%
+[Source 3] citation=AZURE AI SEARCH :: page 33 :: definition
+Search Service Instance: an Azure Search service instance containing one or more search indexes.
+[Source 4] citation=Virus Detection and Blocking Service Level :: page 109 :: appendix_topic
+1.
+Virus Detection and Blocking Service Level
+a.
+“Virus Detection and Blocking” is defined as the detection and blocking of Viruses by the filters to prevent infection. “Viruses” is broadly
+defined as known malware, which includes viruses, worms, and Trojan horses.
+b.
+A Virus is considered known when widely used commercial virus scanning engines can detect the virus and the detection capability is
+available throughout the EOP network.
+c.
+Must result from a non-purposeful infection.
+d.
+The Virus must have been scanned by the EOP virus filter.
+e.
+If EOP delivers an email that is infected with a known virus to you, EOP will notify you and work with you to identify and remove it. If this
+results in the prevention of an infection, you won’t be eligible for a Service Credit under the Virus Detection and Blocking Service Level.
+f.
+The Virus Detection and Blocking Service Level shall not apply to:
+i.
+Forms of email abuse not classified as malware, such as spam, phishing and other scams, adware, and forms of spyware, which due
+to its targeted nature or limited use is not known to the anti-virus community and thus not tracked by anti-virus products as a virus.
+ii.
+Corrupt, defective, truncated, or inactive viruses contained in NDRs, notifications, or bounced emails.
+g.
+The Service Credit available for the Virus Detection and Blocking Service is: 25% Service Credit of Applicable Service Fee if an infection
+occurs in an Applicable Period, with a maximum o...[TRUNCATED]
+2026-07-03 13:09:10,952 | INFO | [bold green]END[/] answer_query elapsed=37.96s
+2026-07-03 13:09:59,754 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 13:09:59,932 | INFO | [bold green]END[/] answer_query elapsed=0.18s
+2026-07-03 14:42:32,780 | INFO | [bold cyan]START[/] ingest_document file=_incoming_OnlineSvcsConsolidatedSLA_WW_English_June_2026_CR_.pdf ext=.pdf doc_id=3140d4118b34b294
+2026-07-03 14:42:32,790 | INFO | [bold cyan]START[/] load_pdf_document file=3140d4118b34b294__incoming_OnlineSvcsConsolidatedSLA_WW_English_June_2026_CR_.pdf
+2026-07-03 14:42:33,473 | INFO | [bold yellow]PDF loaded[/] pages=109
+2026-07-03 14:42:33,475 | INFO | [bold green]END[/] load_pdf_document elapsed=0.68s
+2026-07-03 14:42:33,476 | INFO | [bold cyan]START[/] extract_pdf_tables file=3140d4118b34b294__incoming_OnlineSvcsConsolidatedSLA_WW_English_June_2026_CR_.pdf
+2026-07-03 14:43:05,368 | INFO | [bold yellow]PDF tables extracted[/] count=836
+2026-07-03 14:43:05,370 | INFO | [bold green]END[/] extract_pdf_tables elapsed=31.89s
+2026-07-03 14:43:05,387 | INFO | [bold yellow]PDF TOC parsed[/] count=199
+2026-07-03 14:43:05,390 | INFO | [bold yellow]Top sections built[/] count=4
+2026-07-03 14:43:05,524 | INFO | [bold yellow]PDF top sections extracted[/] count=4
+2026-07-03 14:43:05,526 | INFO | [bold yellow]Service index built[/] count=191
+2026-07-03 14:43:05,654 | INFO | [bold yellow]PDF service bodies extracted[/] count=191
+2026-07-03 14:43:06,048 | INFO | [bold yellow]Raw tables extracted[/] count=296
+2026-07-03 14:43:06,050 | INFO | [bold yellow]Table rows extracted[/] count=1092
+2026-07-03 14:43:06,052 | INFO | [bold yellow]Table text chunks built[/] count=296
+2026-07-03 14:43:06,301 | INFO | [bold yellow]Rules extracted[/] count=570
+2026-07-03 14:43:06,474 | INFO | [bold yellow]Formulas extracted[/] count=213
+2026-07-03 14:43:06,790 | INFO | [bold yellow]Definitions extracted[/] count=1494
+2026-07-03 14:43:06,793 | INFO | [bold yellow]Appendix topics extracted[/] count=3
+2026-07-03 14:43:06,910 | INFO | [bold yellow]Service exceptions extracted[/] count=28
+2026-07-03 14:43:06,988 | INFO | [bold yellow]Summaries extracted[/] count=191
+2026-07-03 14:43:07,035 | INFO | [bold yellow]Narrative chunks extracted[/] count=459
+2026-07-03 14:45:22,043 | INFO | [bold yellow]Ingestion summary[/] {'pipeline_version': 'ms_sla_prod_final_v2', 'toc_count': 199, 'top_section_count': 4, 'service_count': 191, 'raw_table_count': 296, 'table_row_count': 1092, 'rule_count': 570, 'formula_count': 213, 'definition_count': 1494, 'appendix_topic_count': 3, 'service_exception_count': 28, 'summary_count': 191, 'chunk_count': 459}
+2026-07-03 14:45:22,045 | INFO | [bold green]END[/] ingest_document elapsed=169.26s
+2026-07-03 14:46:39,900 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:46:40,088 | INFO | [bold green]END[/] answer_query elapsed=0.19s
+2026-07-03 14:46:55,682 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:46:55,832 | INFO | [bold green]END[/] answer_query elapsed=0.15s
+2026-07-03 14:47:06,399 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:47:06,610 | INFO | [bold green]END[/] answer_query elapsed=0.21s
+2026-07-03 14:47:21,714 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:47:21,949 | INFO | [bold green]END[/] answer_query elapsed=0.23s
+2026-07-03 14:47:30,657 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:47:30,805 | INFO | [bold green]END[/] answer_query elapsed=0.15s
+2026-07-03 14:48:35,596 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:48:35,767 | INFO | [bold green]END[/] answer_query elapsed=0.17s
+2026-07-03 14:49:03,822 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:49:06,530 | INFO | [bold yellow]Hybrid prompt[/]
+2026-07-03 14:49:06,536 | INFO | Question:
+if user downtime is 99.8 how much service credits i should give him
+
+Evidence:
+[Source 1] citation=APP SERVICE :: page 24 :: chunk
+same region:
+Uptime Percentage
+Service Credit
+< 99.99%
+10%
+< 99%
+25%
+< 95%
+100%
+Uptime Calculation and Service Levels for App Service Apps that don’t use Availability Zones
+“Maximum Available Minutes” is the total accumulated Deployment Minutes across all Apps deployed by Customer in a given Microsoft Azure
+subscription an Applicable Period.
+“Downtime” is the total accumulated Deployment Minutes, across all Apps deployed by Customer in a given Microsoft Azure subscription, during
+which the App is unavailable. A minute is considered unavailable for a given App when there is no connectivity between the App and Microsoft’s
+Internet gateway.
+“Uptime Percentage” is calculated using the following formula:
+Maximum Available Minutes-Downtime
+Maximum Available Minutes
+x 100
+Service Credit:
+The following Service Levels and Service Credits are applicable to Customer’s use of Apps that don’t use Availability Zones:
+→
+Introduction
+→
+General Terms
+→
+Service Specific Terms
+→
+Appendices
+[Source 2] citation=APP SERVICE :: page 24 :: chunk
+capable of supporting auto scale or zone redundancy, configured to perform HTTP load balancing services.
+“Maximum Available Minutes” is the total accumulated minutes during an Applicable Period during which an Application Gateway Cloud Service
+has been deployed in a Microsoft Azure subscription.
+Downtime: is the total accumulated Maximum Available Minutes during an Applicable Period for a given Application Gateway Cloud Service during
+which the Application Gateway Cloud Service is unavailable. A given minute is considered unavailable if all attempts to connect to the Application
+Gateway Cloud Service throughout the minute are unsuccessful.
+Uptime Percentage: The Uptime Percentage is calculated using the following formula:
+Maximum Available Minutes-Downtime
+Maximum Available Minutes
+x 100
+Service Credit:
+Uptime Percentage
+Service Credit
+< 99.95%
+10%
+< 99%
+25%
+[Source 3] citation=APP SERVICE :: page 24 :: chunk
+→
+Introduction
+→
+General Terms
+→
+Service Specific Terms
+→
+Appendices
+Uptime Percentage
+Service Credit
+< 99.95%
+10%
+< 99%
+25%
+< 95%
+100%
+Additional Terms: Service Credits are applicable only to fees attributable to your use of Web Apps, Mobile Apps, API Apps or Logic Apps and not to
+fees attributable to other types of apps available through the App Service, which are not covered by this SLA.
+As of September 1, 2024, App Service Environment version 1 and version 2 are retired Service features, and their Support Windows are expired.
+App Service no longer provides any Service Level guarantees, and by extension Service Credits, for performance or availability issues related to
+workloads running on App Service Environment version 1 and version 2.
+Application Gateway
+Additional Definitions:
+“Application Gateway Cloud Service” refers to a collection of two or more medium or larger Application Gateway instances or deployments
+[Source 4] citation=APP SERVICE :: page 25 :: table
+[["","Uptime Percentage","","Service Credit"],["< 99.95%","","10%",""],["< 99%","","25%",""]]
+[Source 5] citation=APP SERVICE :: page 25 :: table
+[["","Uptime Percentage","","Service Credit"],["< 99.95%","","10%",""],["< 99%","","25%",""]]
+[Source 6] citation=APP SERVICE :: page 25 :: table
+[["","Uptime Percentage","","Service Credit"],["< 99.95%","","10%",""],["< 99%","","25%",""],["< 95%","","100%",""]]
+
+Answe...[TRUNCATED]
+2026-07-03 14:49:35,541 | INFO | [bold green]END[/] answer_query elapsed=31.72s
+2026-07-03 14:51:42,570 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:51:43,890 | INFO | [bold yellow]Hybrid prompt[/]
+2026-07-03 14:51:43,892 | INFO | Question:
+if user downtime is 99.8 how much service credits i should give him according to operator service manager service
+
+Evidence:
+[Source 1] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: chunk
+Available Minutes in an Applicable Period. Uptime Percentage is calculated per region and is represented by the following formula:
+Monthly Uptime %= (Maximum Available Minutes−Downtime)/Maximum Available Minutes x 100
+Service Credit:
+Uptime Percentage
+Service Credit
+< 99.9%
+10%
+< 99%
+25%
+Service Level Exceptions:
+Performance or availability issues that result from
+•
+Your failure to adhere to any required configurations, use supported platforms, follow any policies for acceptable use, or your use of the
+Service in a manner inconsistent with the features and functionality of the Service (for example, attempts to perform operations that are
+not supported) or inconsistent with our published guidance.
+•
+Your attempts to perform operations that exceed prescribed quotas or that resulted from our throttling of suspected abusive behavior.
+→
+Introduction
+→
+General Terms
+→
+Service Specific Terms
+→
+Appendices
+[Source 2] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: chunk
+Azure Operator Service Manager
+Additional Definitions:
+"Applicable Service Fees" means the total fees actually paid by you for a Service that are applied to the Applicable Period in which a Service Credit
+is owed.
+"Service Level" means the performance metric(s) set forth in this SLA that Microsoft agrees to meet in the delivery of the Services.
+"Maximum Available Minutes" is the total accumulated minutes during an Applicable Period in which at least one Azure Operator Service Manager
+Site Network Service resource has been deployed in a Microsoft Azure Subscription.
+"Downtime" A minute is considered downtime if all continuous attempts to create, update or view resources of the service throughout the minute
+either return an Error Code or do not result in a Success Code within two minutes.
+"Uptime Percentage" for Azure Operator Service Manager is calculated as Maximum Available Minutes less Downtime divided by Maximum
+[Source 3] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: table
+[["\"Applicable Service Fees\" means the total fees actually paid by you for a Service that are applied to the Applicable Period in which a Service Credit"],["is owed."],["\"Service Level\" means the performance metric(s) set forth in this SLA that Microsoft agrees to meet in the delivery of the Services."],["\"Maximum Available Minutes\" is the total accumulated minutes during an Applicable Period in which at least one Azure Operator Service Manager"],["Site Network Service resource has been deployed in a Microsoft Azure Subscription."],["\"Downtime\" A minute is considered downtime if all continuous attempts to create, update or view resources of the service throughout the minute"],["either return an Error Code or do not result in a Success Code within two minutes."],["\"Uptime Percentage\" for Azure Operator Service Manager is calculated as Maximum Available Minutes less Downtime divided by Maximum"],["Available Minutes in an Applicable Period. Uptime Percentage is calculated per region and is represented by the following formula:"],["Monthly Uptime %= (Maximum Available Minutes−Downtime)/Maximum Available Minutes x 100"]]
+[Source 4] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: service_summary
+Additional Definitions: "Applicable Service Fees" means the total fees actually paid by...[TRUNCATED]
+2026-07-03 14:52:06,758 | INFO | [bold green]END[/] answer_query elapsed=24.19s
+2026-07-03 14:52:37,097 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:52:38,373 | INFO | [bold yellow]Hybrid prompt[/]
+2026-07-03 14:52:38,375 | INFO | Question:
+if user downtime is 99.9 how much service credits i should give him according to operator service manager service
+
+Evidence:
+[Source 1] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: chunk
+Available Minutes in an Applicable Period. Uptime Percentage is calculated per region and is represented by the following formula:
+Monthly Uptime %= (Maximum Available Minutes−Downtime)/Maximum Available Minutes x 100
+Service Credit:
+Uptime Percentage
+Service Credit
+< 99.9%
+10%
+< 99%
+25%
+Service Level Exceptions:
+Performance or availability issues that result from
+•
+Your failure to adhere to any required configurations, use supported platforms, follow any policies for acceptable use, or your use of the
+Service in a manner inconsistent with the features and functionality of the Service (for example, attempts to perform operations that are
+not supported) or inconsistent with our published guidance.
+•
+Your attempts to perform operations that exceed prescribed quotas or that resulted from our throttling of suspected abusive behavior.
+→
+Introduction
+→
+General Terms
+→
+Service Specific Terms
+→
+Appendices
+[Source 2] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: chunk
+Azure Operator Service Manager
+Additional Definitions:
+"Applicable Service Fees" means the total fees actually paid by you for a Service that are applied to the Applicable Period in which a Service Credit
+is owed.
+"Service Level" means the performance metric(s) set forth in this SLA that Microsoft agrees to meet in the delivery of the Services.
+"Maximum Available Minutes" is the total accumulated minutes during an Applicable Period in which at least one Azure Operator Service Manager
+Site Network Service resource has been deployed in a Microsoft Azure Subscription.
+"Downtime" A minute is considered downtime if all continuous attempts to create, update or view resources of the service throughout the minute
+either return an Error Code or do not result in a Success Code within two minutes.
+"Uptime Percentage" for Azure Operator Service Manager is calculated as Maximum Available Minutes less Downtime divided by Maximum
+[Source 3] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: table
+[["Uptime Percentage","Service Credit"],["< 99.9%","10%"],["< 99%","25%"]]
+[Source 4] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: table
+[["\"Applicable Service Fees\" means the total fees actually paid by you for a Service that are applied to the Applicable Period in which a Service Credit"],["is owed."],["\"Service Level\" means the performance metric(s) set forth in this SLA that Microsoft agrees to meet in the delivery of the Services."],["\"Maximum Available Minutes\" is the total accumulated minutes during an Applicable Period in which at least one Azure Operator Service Manager"],["Site Network Service resource has been deployed in a Microsoft Azure Subscription."],["\"Downtime\" A minute is considered downtime if all continuous attempts to create, update or view resources of the service throughout the minute"],["either return an Error Code or do not result in a Success Code within two minutes."],["\"Uptime Percentage\" for Azure Operator Service Manager is calculated as Maximum Available Minutes less Downtime divided by Maximum"],["Available Minutes in an Applicable Period. Uptime Percentage is calculated per region and is represented by the following formula:"],["Monthly Uptime %= (Maximum Available Minutes−Downtime)/Maximum Available Minutes x 100"]]
+[Source 5] citation=AZ...[TRUNCATED]
+2026-07-03 14:52:58,958 | INFO | [bold green]END[/] answer_query elapsed=21.86s
+2026-07-03 14:53:24,824 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:53:26,093 | INFO | [bold yellow]Hybrid prompt[/]
+2026-07-03 14:53:26,095 | INFO | Question:
+if user downtime is 99.98 how much service credits i should give him according to operator service manager service
+
+Evidence:
+[Source 1] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: chunk
+Available Minutes in an Applicable Period. Uptime Percentage is calculated per region and is represented by the following formula:
+Monthly Uptime %= (Maximum Available Minutes−Downtime)/Maximum Available Minutes x 100
+Service Credit:
+Uptime Percentage
+Service Credit
+< 99.9%
+10%
+< 99%
+25%
+Service Level Exceptions:
+Performance or availability issues that result from
+•
+Your failure to adhere to any required configurations, use supported platforms, follow any policies for acceptable use, or your use of the
+Service in a manner inconsistent with the features and functionality of the Service (for example, attempts to perform operations that are
+not supported) or inconsistent with our published guidance.
+•
+Your attempts to perform operations that exceed prescribed quotas or that resulted from our throttling of suspected abusive behavior.
+→
+Introduction
+→
+General Terms
+→
+Service Specific Terms
+→
+Appendices
+[Source 2] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: chunk
+Azure Operator Service Manager
+Additional Definitions:
+"Applicable Service Fees" means the total fees actually paid by you for a Service that are applied to the Applicable Period in which a Service Credit
+is owed.
+"Service Level" means the performance metric(s) set forth in this SLA that Microsoft agrees to meet in the delivery of the Services.
+"Maximum Available Minutes" is the total accumulated minutes during an Applicable Period in which at least one Azure Operator Service Manager
+Site Network Service resource has been deployed in a Microsoft Azure Subscription.
+"Downtime" A minute is considered downtime if all continuous attempts to create, update or view resources of the service throughout the minute
+either return an Error Code or do not result in a Success Code within two minutes.
+"Uptime Percentage" for Azure Operator Service Manager is calculated as Maximum Available Minutes less Downtime divided by Maximum
+[Source 3] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: table
+[["\"Applicable Service Fees\" means the total fees actually paid by you for a Service that are applied to the Applicable Period in which a Service Credit"],["is owed."],["\"Service Level\" means the performance metric(s) set forth in this SLA that Microsoft agrees to meet in the delivery of the Services."],["\"Maximum Available Minutes\" is the total accumulated minutes during an Applicable Period in which at least one Azure Operator Service Manager"],["Site Network Service resource has been deployed in a Microsoft Azure Subscription."],["\"Downtime\" A minute is considered downtime if all continuous attempts to create, update or view resources of the service throughout the minute"],["either return an Error Code or do not result in a Success Code within two minutes."],["\"Uptime Percentage\" for Azure Operator Service Manager is calculated as Maximum Available Minutes less Downtime divided by Maximum"],["Available Minutes in an Applicable Period. Uptime Percentage is calculated per region and is represented by the following formula:"],["Monthly Uptime %= (Maximum Available Minutes−Downtime)/Maximum Available Minutes x 100"]]
+[Source 4] citation=AZURE OPERATOR SERVICE MANAGER :: page 78 :: service_summary
+Additional Definitions: "Applicable Service Fees" means the total fees actually paid b...[TRUNCATED]
+2026-07-03 14:53:47,009 | INFO | [bold green]END[/] answer_query elapsed=22.18s
+2026-07-03 14:54:17,827 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:54:17,980 | INFO | [bold green]END[/] answer_query elapsed=0.15s
+2026-07-03 14:54:55,051 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:54:55,126 | INFO | [bold magenta]FORCED deterministic credit route[/]
+2026-07-03 14:54:55,328 | INFO | [bold green]END[/] answer_query elapsed=0.27s
+2026-07-03 14:55:14,543 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:55:14,619 | INFO | [bold magenta]FORCED deterministic credit route[/]
+2026-07-03 14:55:14,803 | INFO | [bold green]END[/] answer_query elapsed=0.26s
+2026-07-03 14:55:30,428 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 14:55:30,509 | INFO | [bold magenta]FORCED deterministic credit route[/]
+2026-07-03 14:55:30,681 | INFO | [bold green]END[/] answer_query elapsed=0.25s
+2026-07-03 17:52:29,286 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 17:52:29,510 | INFO | [bold green]END[/] answer_query elapsed=0.21s
+2026-07-03 17:52:58,254 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 17:52:58,439 | INFO | [bold green]END[/] answer_query elapsed=0.18s
+2026-07-03 17:53:37,861 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 17:53:37,944 | INFO | [bold magenta]FORCED deterministic credit route[/]
+2026-07-03 17:53:38,109 | INFO | [bold green]END[/] answer_query elapsed=0.25s
+2026-07-03 19:14:58,099 | INFO | [bold cyan]START[/] ingest_document file=_incoming_OnlineSvcsConsolidatedSLA_WW_English_June_2026_CR_.pdf ext=.pdf doc_id=3140d4118b34b294
+2026-07-03 19:14:58,110 | INFO | [bold cyan]START[/] load_pdf_document file=3140d4118b34b294__incoming_OnlineSvcsConsolidatedSLA_WW_English_June_2026_CR_.pdf
+2026-07-03 19:14:58,788 | INFO | [bold yellow]PDF loaded[/] pages=109
+2026-07-03 19:14:58,789 | INFO | [bold green]END[/] load_pdf_document elapsed=0.68s
+2026-07-03 19:14:58,791 | INFO | [bold cyan]START[/] extract_pdf_tables file=3140d4118b34b294__incoming_OnlineSvcsConsolidatedSLA_WW_English_June_2026_CR_.pdf
+2026-07-03 19:15:27,450 | INFO | [bold yellow]PDF tables extracted[/] count=836
+2026-07-03 19:15:27,451 | INFO | [bold green]END[/] extract_pdf_tables elapsed=28.66s
+2026-07-03 19:15:27,466 | INFO | [bold yellow]PDF TOC parsed[/] count=199
+2026-07-03 19:15:27,469 | INFO | [bold yellow]Top sections built[/] count=4
+2026-07-03 19:15:27,558 | INFO | [bold yellow]PDF top sections extracted[/] count=4
+2026-07-03 19:15:27,560 | INFO | [bold yellow]Service index built[/] count=191
+2026-07-03 19:15:27,666 | INFO | [bold yellow]PDF service bodies extracted[/] count=191
+2026-07-03 19:15:27,940 | INFO | [bold yellow]Raw tables extracted[/] count=296
+2026-07-03 19:15:27,942 | INFO | [bold yellow]Table rows extracted[/] count=1092
+2026-07-03 19:15:27,943 | INFO | [bold yellow]Table text chunks built[/] count=296
+2026-07-03 19:15:28,120 | INFO | [bold yellow]Rules extracted[/] count=570
+2026-07-03 19:15:28,260 | INFO | [bold yellow]Formulas extracted[/] count=213
+2026-07-03 19:15:28,534 | INFO | [bold yellow]Definitions extracted[/] count=1494
+2026-07-03 19:15:28,535 | INFO | [bold yellow]Appendix topics extracted[/] count=3
+2026-07-03 19:15:28,670 | INFO | [bold yellow]Service exceptions extracted[/] count=28
+2026-07-03 19:15:28,740 | INFO | [bold yellow]Summaries extracted[/] count=191
+2026-07-03 19:15:28,791 | INFO | [bold yellow]Narrative chunks extracted[/] count=459
+2026-07-03 19:17:28,881 | INFO | [bold yellow]Ingestion summary[/] {'pipeline_version': 'ms_sla_prod_final_v2', 'toc_count': 199, 'top_section_count': 4, 'service_count': 191, 'raw_table_count': 296, 'table_row_count': 1092, 'rule_count': 570, 'formula_count': 213, 'definition_count': 1494, 'appendix_topic_count': 3, 'service_exception_count': 28, 'summary_count': 191, 'chunk_count': 459}
+2026-07-03 19:17:28,890 | INFO | [bold green]END[/] ingest_document elapsed=150.78s
+2026-07-03 19:17:38,017 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 19:17:38,171 | INFO | [bold green]END[/] answer_query elapsed=0.15s
+2026-07-03 19:17:46,326 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 19:17:46,615 | INFO | [bold green]END[/] answer_query elapsed=0.29s
+2026-07-03 19:17:56,103 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 19:17:56,644 | INFO | [bold magenta]FORCED deterministic credit route[/]
+2026-07-03 19:17:56,798 | INFO | [bold green]END[/] answer_query elapsed=0.69s
+2026-07-03 19:18:23,643 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 19:18:23,770 | INFO | [bold green]END[/] answer_query elapsed=0.13s
+2026-07-03 19:19:11,763 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 19:19:11,872 | INFO | [bold green]END[/] answer_query elapsed=0.11s
+2026-07-03 19:20:11,316 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 19:20:11,425 | INFO | [bold green]END[/] answer_query elapsed=0.11s
+2026-07-03 19:21:05,167 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 19:21:05,275 | INFO | [bold green]END[/] answer_query elapsed=0.11s
+2026-07-03 19:21:22,513 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 19:21:22,640 | INFO | [bold green]END[/] answer_query elapsed=0.13s
+2026-07-03 19:21:41,158 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 19:21:41,334 | INFO | [bold green]END[/] answer_query elapsed=0.17s
+2026-07-03 19:22:47,576 | INFO | [bold cyan]START[/] answer_query doc_id=3140d4118b34b294
+2026-07-03 19:22:47,850 | INFO | [bold magenta]FORCED deterministic credit route[/]
+2026-07-03 19:22:47,961 | INFO | [bold green]END[/] answer_query elapsed=0.38s
